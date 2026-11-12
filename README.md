@@ -204,3 +204,12 @@ No passwords, SSH private keys, Hugging Face tokens, API keys, gateway keys, dat
 ---
 
 This public repository intentionally documents architecture, milestones, lessons learned and benchmark results without exposing private addressing, accounts, credentials or sensitive topology details.
+
+## Project links and context
+
+- **[Personal technology portfolio](https://deubank-mws.github.io/)** — broader context about the technical and leadership interests behind this experiment.
+- **Private implementation:** The operational Forge repository is maintained privately. This public experiment deliberately focuses on replicable architecture, tests, milestones, and lessons rather than live host configuration.
+
+### Reproducing the approach
+
+This repository is a documented case study rather than a turnkey deployment installer. Before adapting the design, verify hardware compatibility, current NVIDIA runtime and model support, inter-node networking, and your security posture. Keep any local hostnames, IP addresses, tokens, and environment-specific configurations out of public commits.
