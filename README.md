@@ -26,6 +26,13 @@ Current capabilities include:
 - lightweight Markdown-based persistent project knowledge
 - validated Fast and Deep routes backed by one distributed model
 
+
+## Reference architecture diagram
+
+![Illustrative local AI architecture](https://raw.githubusercontent.com/dietricheubank/deubank-mws.github.io/main/assets/ai-architecture.svg)
+
+*Illustrative architecture graphic based on this case study. It is not a live network export and omits private host configuration.*
+
 ## Service path
 
 ```text
