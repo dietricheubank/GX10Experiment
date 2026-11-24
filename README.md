@@ -29,7 +29,7 @@ Current capabilities include:
 
 ## Reference architecture diagram
 
-![Illustrative local AI architecture](https://raw.githubusercontent.com/dietricheubank/deubank-mws.github.io/main/assets/ai-architecture.svg)
+![Illustrative local AI architecture](https://raw.githubusercontent.com/dietricheubank/dietricheubank.github.io/main/assets/ai-architecture.svg)
 
 *Illustrative architecture graphic based on this case study. It is not a live network export and omits private host configuration.*
 
@@ -214,7 +214,7 @@ This public repository intentionally documents architecture, milestones, lessons
 
 ## Project links and context
 
-- **[Personal technology portfolio](https://deubank-mws.github.io/)** — broader context about the technical and leadership interests behind this experiment.
+- **[Personal technology portfolio](https://dietricheubank.github.io/)** — broader context about the technical and leadership interests behind this experiment.
 - **Private implementation:** The operational Forge repository is maintained privately. This public experiment deliberately focuses on replicable architecture, tests, milestones, and lessons rather than live host configuration.
 
 ### Reproducing the approach
