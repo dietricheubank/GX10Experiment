@@ -91,6 +91,20 @@ Approx. throughput:  15.2 completion tokens/sec end-to-end
 Short-prompt TTFT:   ~0.25 seconds
 ```
 
+### Benchmark reproduction protocol
+
+The figures above are a historical observation, not a controlled comparison or a performance guarantee. To establish a comparable baseline:
+
+1. Record the model revision, quantization, runtime version, tensor-parallel degree, context limit, and generation settings.
+2. Use a fixed synthetic prompt set with short and long input lengths. Record actual input and output token counts; do not use private conversations as fixtures.
+3. Measure cold startup separately from warm inference. For warm inference, perform a warm-up request, then at least five measured requests per scenario.
+4. Test streaming at concurrency one first. Repeat at higher concurrency only as a separately labeled workload.
+5. Report median and range for time to first token (TTFT), end-to-end latency, and completion tokens per second. Include failures and timeouts rather than silently discarding them.
+
+Define TTFT as elapsed time from request submission to the first generated content token. End-to-end throughput is completion tokens divided by total request duration; decode-only throughput requires separate timing after the first token. These metrics are not interchangeable. State whether reasoning tokens are included in completion counts.
+
+Suggested result columns: scenario, input tokens, output tokens, concurrency, TTFT (s), total latency (s), completion tokens/s, and outcome. Publish only synthetic inputs and sanitized aggregate results; omit hostnames, addresses, credentials, and raw request logs.
+
 ## Runtime lesson learned
 
 An early deployment with a newer TensorRT-LLM release failed in the multi-node leader/worker processes. Rolling back to the known-good 1.2.0rc6 runtime produced a stable distributed Qwen deployment.
